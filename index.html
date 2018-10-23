@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nucleons - HTML5</title>
+    <style type="text/css">
+        canvas {
+            background: white;
+        }
+
+        body {
+            margin: 0
+        }
+        
+    </style>
+    <style>
+        .slider {
+                -webkit-appearance: none;                
+                height: 15px;
+                background: #d3d3d3;
+                outline: none;
+                opacity: 0.7;
+                -webkit-transition: .2s;
+                transition: opacity .2s;
+            }
+            
+        .slider:hover {
+                opacity: 1;
+            }
+            
+        .slider::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 15px;
+                height: 15px;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+            
+        .slider::-moz-range-thumb {
+                width: 15px;
+                height: 15px;
+                background: #4CAF50;
+                cursor: pointer;
+            }
+
+        
+    </style>
+</head>
+
+<body>
+
+    <canvas>
+    </canvas>
+
+    <div class="slidecontainer">
+        Electromagnetic
+        <input type="range" min="0" max="200" value="100" class="slider" id="ELECTROMAGNETIC">
+        Gravitation
+        <input type="range" min="0" max="200" value="50" class="slider" id="GRAVITATION">
+        Elasticity
+        <input type="range" min="0" max="100" value="90" class="slider" id="ELASTICITY">
+        Friction
+        <input type="range" min="0" max="100" value="5" class="slider" id="FRICTION">
+        Trace
+        <input type="checkbox" checked=true id="TRACE">
+        Vector
+        <input type="checkbox" id="VECTOR">
+    </div>
+
+    <script src=vector.js></script>
+    <script src=particle.js></script>
+    <script src=canvas.js></script>
+
+</body>
+
+</html>
